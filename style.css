@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html,body {
+  font-family: 'Press Start 2P', sans-serif;
+  color: #eee;
+  
+  background-color: rgb(68, 2, 68);
+  height:100%;
+  
+}
+
+main{
+    height:100vh;
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position: relative;
+    z-index:10;
+}
+
+h1{
+    padding:30px;
+}
+
+p{
+    padding-top:30px;
+    padding-bottom:60px;
+}
+
+.start-btn{
+    font-family: 'Press Start 2P', sans-serif;
+    padding:20px;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:10px;
+    color:rgb(68, 2, 68);
+}
+
+.start-btn:hover{
+  border:1px solid white;
+  color:white;
+  background-color:rgb(68, 2, 68);;
+}
+
+.start-btn:active{
+  transform:scale(0.9);
+}
+
+.numbers {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* so it doesn't block clicks */
+  overflow: hidden;
+  z-index: 0; /* stays above header/main */
+}
+
+.num {
+  position: absolute;
+  width: 60px;   /* adjust to your image size */
+  height: auto;
+  opacity: 0;
+  animation: float 2s ease-in-out forwards;
+  
+}
+
+
+
+@keyframes float {
+      0%   { opacity: 0 }
+      100% { opacity: 1 }
+    }
